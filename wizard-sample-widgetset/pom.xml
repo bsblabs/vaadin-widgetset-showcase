@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.bsb.samples.vaadin</groupId>
+        <artifactId>wizard-sample</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>wizard-sample-widgetset</artifactId>
+    <packaging>jar</packaging>
+    <name>Wizard sample :: Widgetset</name>
+    <description>
+        This is where the widgetset compilation occurs. This module is optional and is only rebuilt
+        on demand through the 'all' profile. Compilation of the widgetset is necessary when you
+        update to a new Vaadin version or you change the version of an add-on you're using.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.bsb.samples.vaadin</groupId>
+            <artifactId>wizard-sample-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>VAADIN/widgetsets/WEB-INF/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <configuration>
+                    <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
+                    <webappDirectory>${project.build.outputDirectory}/VAADIN/widgetsets</webappDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>resources</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>update-widgetset</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
