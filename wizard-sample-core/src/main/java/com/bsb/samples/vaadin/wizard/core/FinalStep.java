@@ -37,7 +37,7 @@ public class FinalStep implements WizardStep {
         content.setMargin(true);
 
         final Label sorry = new Label("We sincerely hope that you were not expecting a demo of a " +
-                "kick-ass Wizard for Vaadin :)");
+                "kick-ass Wizard :)");
         content.addComponent(sorry);
 
         return content;

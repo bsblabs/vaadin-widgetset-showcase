@@ -20,6 +20,12 @@
             <groupId>com.bsb.samples.vaadin</groupId>
             <artifactId>wizard-sample-widgetset</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.bsb.common.vaadin</groupId>
+            <artifactId>com.bsb.common.vaadin.embed</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
