@@ -42,7 +42,7 @@ Once the project has been built, you no longer need to compile the widgetset unl
     $ cd wizard-sample-server
     $ mvn package cargo:run
 
-You can browse the application at [http://localhost:8080/wizard-sample]. You can tweak some properties in the root POM if you want to change the `HTTP` port that cargo uses.
+You can browse the application at [http://localhost:8080/wizard-sample](http://localhost:8080/wizard-sample). You can tweak some properties in the root POM if you want to change the `HTTP` port that cargo uses.
 
 Note also that if you have already built the application, the `package` goal is not necessary.
 
