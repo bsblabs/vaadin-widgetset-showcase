@@ -17,6 +17,7 @@
     </description>
 
     <dependencies>
+        <!-- Let's build the widgetset for our application -->
         <dependency>
             <groupId>com.bsb.samples.vaadin</groupId>
             <artifactId>wizard-sample-core</artifactId>
@@ -63,6 +64,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

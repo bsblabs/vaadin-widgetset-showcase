@@ -23,6 +23,8 @@ import com.vaadin.ui.Window;
 import org.vaadin.teemu.wizards.Wizard;
 
 /**
+ * A simple application that adds our sample wizard.
+ *
  * @author Stephane Nicoll
  */
 public class WizardSampleApplication extends Application {
