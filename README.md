@@ -29,7 +29,7 @@ Note that in that case, any further command explained in this document should en
 
 # Usage
 
-The name of the Maven profile to use to trigger the widgetset compilation is `all`. Please make sure to run at least on full build with this profile active so that your local repository is refreshed with the result of the compilation.
+The name of the Maven profile to use to trigger the widgetset compilation is `all`. Please make sure to run at least one full build with this profile active so that your local repository is refreshed with the result of the compilation.
 
     $ mvn install -Pall
 
@@ -44,7 +44,7 @@ Once the project has been built, you no longer need to compile the widgetset unl
 
 Note that if you have already built the application, the `package` goal is not necessary.
 
-## Start the application from the IDE
+## Start the application from your IDE
 
 You can also very easily start this application using the [Embed for Vaadin add-on](https://vaadin.com/directory#addon/embed-for-vaadin). Open the `StartApp` class and execute the main method. This will start an embed tomcat container configured for that Vaadin application. It will also open your default browser at the proper location.
 
